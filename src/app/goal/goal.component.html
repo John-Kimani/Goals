@@ -4,7 +4,7 @@
     <hr>
     <ul>
         <div *ngFor='let goal of goals; let i = index'> <!-- logic to register the index of each goal item in goal list -->
-            <li>
+            <li appStrikethrough>
                 {{goal.id}}. {{goal.name}}
             </li>
             <button (click)='toggleDetails(i)'>Toggle Details</button>
