@@ -5,7 +5,8 @@
     <ul>
       <li *ngFor='let goal of goals'>
        {{goal.id}}. {{goal.name}}
+       <app-goal-detail [goal]="goal"></app-goal-detail>
       </li>
     </ul>
-    <p *ngIf="goals.length > 5">Your goals are too many</p>
+    <!-- <p *ngIf="goals.length > 5">Your goals are too many</p> -->
   </div>
