@@ -19,6 +19,6 @@ export class AppComponent {
     {id:3,  name:'Get new Phone Case'},
     {id:4,  name:'Get Dog Food'},
     {id:5,  name:'Solve math homework'},
-    {id:6,  name:'Plot my world domination plan'},
+    // {id:6,  name:'Plot my world domination plan'},
   ]
 }
