@@ -5,7 +5,7 @@
     <ul>
         <div *ngFor='let goal of goals; let i = index'> <!-- logic to register the index of each goal item in goal list -->
             <li appStrikethrough>
-                {{goal.id}}. {{goal.name}} due on {{goal.completeDate}}
+                {{goal.id}}. {{goal.name}} due on {{goal.completeDate|date|uppercase}}
             </li>
             <button (click)='toggleDetails(i)'>Toggle Details</button>
             <app-goal-detail *ngIf="goal.showDescription" [goal]="goal" (isComplete)="completeGoal($event, i)"></app-goal-detail>
