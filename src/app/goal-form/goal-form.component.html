@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <h2 class="text-center">Create a new Goal</h2>
     <hr>
-    <form #goalForm="ngForm">
+    <form (ngSubmit)="submitGoal()" #goalForm="ngForm">
         <!-- adds form template -->
         <div class="form-group">
             <label for="name">Name</label>
@@ -30,5 +30,6 @@
                 <p>Date is required</p> 
             </div>
         </div>
+        <button type="submit" class="btn btn-success">Add Goal</button>
     </form>
 </div>

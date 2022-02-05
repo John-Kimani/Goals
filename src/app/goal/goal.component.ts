@@ -23,7 +23,16 @@ export class GoalComponent implements OnInit {
     new Goal(5, 'Solve Math homework', 'Damn Math', new Date(2022,1,2)),
     new Goal(6, 'Plot my word domination plan', 'Cause I am an evil overload', new Date(2022,1,3)),
 
-  ]
+  ];
+  //new goals emmited from form
+  addNewGoal(goal: any){
+    let goalLength = this.goals.length;
+    goal.id = goalLength+1;
+    goal.completeDate = new Date(goal.completeDate);
+    this.goals.push(goal);
+  }
+  // new goals function results to be pushed
+
   toggleDetails(index :any){
     this.goals[index].showDescription = !this.goals[index].showDescription
   }

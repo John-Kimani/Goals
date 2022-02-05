@@ -16,7 +16,8 @@
             </div>
         </div>
         <div class="col-md-6">
-            <app-goal-form></app-goal-form>
+            <p>Why add Here</p>
+            <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
         </div>
     </div>
     <p *ngIf="goals.length > 5">Your goals are too many</p>
