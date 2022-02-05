@@ -18,6 +18,7 @@
         <div class="form-group">
             <label for="description">Descriptions</label>
             <textarea class="form-control" id="description" rows="4" required [(ngModel)]="newGoal.description" name="description" #description="ngModel"></textarea>
+             Display {{newGoal.description}}
             <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
                 <p>Description is required</p>
             </div>
