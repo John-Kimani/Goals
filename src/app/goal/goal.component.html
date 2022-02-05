@@ -8,7 +8,7 @@
                 {{goal.id}}. {{goal.name}} due on {{goal.completeDate|date|uppercase}}
             </li>
             <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-goal-detail *ngIf="goal.showDescription" [goal]="goal" (isComplete)="completeGoal($event, i)"></app-goal-detail>
+            <app-goal-detail *ngIf="goal.showDescription" [goal]="goal" (isComplete)="deleteGoal($event, i)"></app-goal-detail>
         </div>
     </ul>
     <p *ngIf="goals.length > 5">Your goals are too many</p>
