@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Goal } from '../goal';
+import { GoalService } from '../goal-service/goal.service';
 
 @Component({
   selector: 'app-goal',
@@ -35,7 +36,10 @@ export class GoalComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  goals:Goal[]
+  constructor(goalService:GoalService) {
+    this.goals = goalService.getGoals()
+   }
 
   ngOnInit(): void {
   }
