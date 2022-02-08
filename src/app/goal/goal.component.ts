@@ -55,7 +55,7 @@ export class GoalComponent implements OnInit {
       quote: string;
     }
 
-    this.http.get<ApiResponse>('http://quote.stormconsultancy.com.uk/random.json').subscribe(data=>{
+    this.http.get<ApiResponse>('http://quotes.stormconsultancy.co.uk/random.json').subscribe(data=>{
       //sucessfull API request
       this.quote = new Quote(data.author, data.quote)
     })
