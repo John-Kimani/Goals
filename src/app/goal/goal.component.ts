@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Goal } from '../goal';
 import { GoalService } from '../goal-service/goal.service';
 import { AlertService } from '../alert-service/alert.service';
+import { HttpClient } from '@angular/common/http';
+import { Quote } from '../qoute-class/quote';
 
 @Component({
   selector: 'app-goal',
@@ -40,14 +42,25 @@ export class GoalComponent implements OnInit {
 
   goals:Goal[]
   alertService:AlertService;
+  quote:Quote;
   
-  constructor(goalService:GoalService, alertservice:AlertService) {
+  constructor(goalService:GoalService, alertservice:AlertService, private http:HttpClient) {
     this.goals = goalService.getGoals()
     this.alertService = alertservice;
    }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    interface ApiResponse{
+      author: string;
+      quote: string;
+    }
+
+    this.http.get<ApiResponse>('http://quote.stormconsultancy.com.uk/random.json').subscribe(data=>{
+      //sucessfull API request
+      this.quote = new Quote(data.author, data.quote)
+    })
   }
+
 
 }
 // function toggleDetails(index: any): Goal {
