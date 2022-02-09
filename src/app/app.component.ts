@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { Goal } from './goal';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { NgProgressModule } from '@ngx-progressbar/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   // title = 'Goals';
   // goal = 'Watch finding Nemo'
@@ -15,3 +18,5 @@ export class AppComponent {
   // }
 
 }
+
+

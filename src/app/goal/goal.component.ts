@@ -60,6 +60,7 @@ export class GoalComponent implements OnInit {
       this.quote = new Quote(data.author, data.quote)
     }, err=>{
       this.quote = new Quote('Winston Churchill', 'Never never give up!')
+      // alert('Hey')
       console.log('An error occured')
     })
   }
