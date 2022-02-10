@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Goal } from './goal';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-import { NgProgressModule } from '@ngx-progressbar/core';
+
 
 @Component({
   selector: 'app-root',

@@ -12,8 +12,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { HttpClientModule } from '@angular/common/http'; //imports http protocol
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
 // import { NgProgressModule } from '@ngx-progressbar/core';//loader that listens to our HTTPS request
 // import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';//normal loader
 
